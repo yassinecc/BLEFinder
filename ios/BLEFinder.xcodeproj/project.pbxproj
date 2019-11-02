@@ -19,6 +19,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* BLEFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BLEFinderTests.m */; };
 		5707170AF25063664A22E5C6 /* libPods-BLEFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BDB4712E5BFA6160758F08 /* libPods-BLEFinder.a */; };
 		A3EA67579AAE18D9EBCC6E51 /* libPods-BLEFinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37580D340874A6B1485B9B4C /* libPods-BLEFinderTests.a */; };
+		D2FF148A236E19DC0059523A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FF1489236E19DC0059523A /* File.swift */; };
 		DB8720BE357619EF25B11861 /* libPods-BLEFinder-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB577AA0D5A2049946B6D43 /* libPods-BLEFinder-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		A7FADE6A7521B809D4AF45CA /* Pods-BLEFinder-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEFinder-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BLEFinder-tvOS/Pods-BLEFinder-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B1E1A2BE58128D2D15B67EE5 /* Pods-BLEFinder-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEFinder-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BLEFinder-tvOSTests/Pods-BLEFinder-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C4BD128222B9BE590AE004 /* Pods-BLEFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEFinder.debug.xcconfig"; path = "Target Support Files/Pods-BLEFinder/Pods-BLEFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		D2FF1488236E19DC0059523A /* BLEFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLEFinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		D2FF1489236E19DC0059523A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = BLEFinder/File.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F26CDCBAFABDD74FB4B2EC07 /* Pods-BLEFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-BLEFinderTests/Pods-BLEFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				D2FF1489236E19DC0059523A /* File.swift */,
+				D2FF1488236E19DC0059523A /* BLEFinder-Bridging-Header.h */,
 			);
 			name = BLEFinder;
 			sourceTree = "<group>";
@@ -161,7 +166,6 @@
 				F26CDCBAFABDD74FB4B2EC07 /* Pods-BLEFinderTests.debug.xcconfig */,
 				14320FC6AD71E65A7036E60C /* Pods-BLEFinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +296,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +315,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -529,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				D2FF148A236E19DC0059523A /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F26CDCBAFABDD74FB4B2EC07 /* Pods-BLEFinderTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14320FC6AD71E65A7036E60C /* Pods-BLEFinderTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = BLEFinderTests/Info.plist;
@@ -626,6 +637,7 @@
 			baseConfigurationReference = B5C4BD128222B9BE590AE004 /* Pods-BLEFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = BLEFinder/Info.plist;
@@ -637,6 +649,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BLEFinder;
+				SWIFT_OBJC_BRIDGING_HEADER = "BLEFinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +661,7 @@
 			baseConfigurationReference = 99A7A516237EDBD3114E15E3 /* Pods-BLEFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = BLEFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +672,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BLEFinder;
+				SWIFT_OBJC_BRIDGING_HEADER = "BLEFinder-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
